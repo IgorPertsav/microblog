@@ -34,4 +34,19 @@ Microblog::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  config.action_mailer.default_url_options = {
+                                              :host => 'localhost',
+                                              :address => 'smtp.gmail.com',
+                                              :port => 3000,
+                                              :user_name => 'pertsavigorstray@gmail.com',
+                                              :password => '203Night20Spirit01',
+                                              :enable_starttls_auto => true,
+                                              :tls => true,
+                                              :authentication => :login}
+
+  config.assets.initialize_on_precompile = false
+
+  config.action_mailer.delivery_method = :smtp
+
 end

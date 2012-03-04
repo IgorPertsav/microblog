@@ -6,6 +6,12 @@
   <%= render 'layouts/stylesheets' %>
 </head>
 <body>
+<% if !notice.nil? %>
+    <p class="notice"><%= notice %></p>
+<% end %>
+<% if !notice.nil? %>
+    <p class="alert"><%= alert %></p>   .
+<% end %>
 <div class="container">
     <%= render 'layouts/navigator' %>
   <section class="round">
